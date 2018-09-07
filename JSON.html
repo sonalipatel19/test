@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id= "demo"></p>
+<button onclick="loadDoc()"> Change Content</button>
+<script>
+/*var myObj, i, j, x= "";
+ myObj ={
+	 "name":"John",
+     "age":30,
+     "cars": [
+        {"name":"Ford", "models":["Fiesta", "Focus", "Mustang"]},
+        {"name":"BMW", "models":["320", "X3", "X5"]},
+        {"name":"Fiat", "models":["500", "Panda"] }
+    ]
+}
+
+for(i in myObj.cars){
+	x += "<h2>" + myObj.cars[i].name + "</h2>";
+	for(j in myObj.cars[i].models){
+		x += myObj.cars[i].models[j] + "<br>";
+	}
+}
+document.getElementById("demo").innerHTML = x;
+/*var text = '{"name":"John", "age":"function(){return 30;}", "city": "New York"}';
+var obj = JSON.parse(text);
+obj.age = eval("("+ obj.age +")");
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age();*/
+function loadDoc(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function(){
+	if(this.readyState == 4 && this.status == 200){
+		// var myObj = JSON.parse();
+		document.getElementById("demo").innerHTML = this.responseText; 
+		// JSON.stringify(myObj.pets[0]);
+	}
+};
+xhttp.open("GET", "json_demo.txt", true);
+xhttp.send();
+}
+/*var obj = {name:"John", lname:"Peter", age: 30, city:"Pune"};
+for(x in obj){
+var myJSON = JSON.stringify(obj);
+document.getElementById("demo").innerHTML += obj[x] + "<br>";
+}
+
+/*var myObj, myJSON, text, obj;
+ myObj= {name: "John", age:};
+ myJSON = JSON.stringify(myObj);
+ localStorage.setItem("testJSON", myJSON);
+
+ text = localStorage.getItem("testJSON");
+ obj = JSON.parse(text);
+ document.getElementById("demo").innerHTML = obj.name;*/
+</script>
+<!--<p> Take a look at <a href="json_demo.txt" target = "_blank">json_demo.txt</a></p>-->
+</body>
+</html>

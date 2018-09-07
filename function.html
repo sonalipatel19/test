@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<!--<button onclick= "document.getElementById("demo").innerHTML=Date()"> The time is?</button>-->
+<button onclick="myFunction()">Try it </button>
+<script>
+var str= "Hello";
+var arr = str.split("");
+var text = "";
+var i;
+for(i=0; i< arr.length; i++){
+	text += arr[i] + "<br>"
+}
+document.getElementById("demo").innerHTML = text;
+/*function myFunction(){
+	var text = document.getElementById("demo").innerHTML;
+	/*var txt = str.replace(/Microsoft/g, "W3Schools");
+
+	document.getElementById("demo").innerHTML = text.toLowerCase();
+}
+var text1= "Hello";
+var text2= "World";
+var text3= text1.concat(" ", text2);
+document.getElementById("demo").innerHTML= text3;*/
+/*var str = "Please locate where 'locate' occurs!";
+var pos = str.slice(13);
+document.getElementById("demo").innerHTML= pos;
+	/*var x= 5;
+	var y= 5;
+	var z= 5;
+	document.getElementById("demo").innerHTML= (x==z) + "<br>" + (y==z);
+	var x = myfunction(5,5);
+	document.getElementById("demo").innerHTML= x;
+
+	function myfunction(x,y){
+		return x + y;
+	}
+	/*typeof "john" + "<br>" +
+	typeof 3.14 + "<br>" +
+	typeof true + "<br>" +
+	typeof false + "<br>" +
+	typeof x + "<br>" +
+	typeof { }
+	typeof {name: 'john', age: 22} + "<br>" +
+	typeof [1,2,3,4] + "<br>" +
+	typeof null + "<br>" +
+	typeof function myfun(){};
+myFunction();
+	function myFunction(){
+		var carname = "volvo";
+		document.getElementById("demo1").innerHTML= 
+		typeof carname + " " + carname;
+	}
+	var carname = 123;
+	document.getElementById("demo2").innerHTML= 
+	typeof carname + " " + carname;
+	var car ={type:"Audi", model:"7", color:"white"};
+	document.getElementById("demo").innerHTML= car.type + " " +"<br>" + car.model + " " + "<br>" + car.color;*/
+	
+	
+
+</script>
+</body>
+
+
+
+</html>
