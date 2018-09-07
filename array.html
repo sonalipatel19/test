@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<button onclick= "myFunction()"> Sort Alphabetically</button>
+<button onclick= "myFunction1()"> Sort Alphabetically</button>
+<script>
+/*var fruits, flen, text, i;*/
+
+// fruits = ["Banana", "Orange", "Apple", "Mango"];
+// var text = fruits.slice(1);
+// document.getElementById("demo").innerHTML = fruits + "<br>" + text;
+var points = [40,100,2,4,5,23];
+document.getElementById("demo").innerHTML = points;
+
+function myFunction(){
+	points.sort();
+	document.getElementById("demo").innerHTML = points;
+}
+
+function myFunction1(){
+	points.sort(function(a,b){return a - b});
+	document.getElementById("demo").innerHTML = points;
+}
+/*document.getElementById("demo").innerHTML = fruits;
+function myFunction(){
+	fruits.unshift("Lemon");
+document.getElementById("demo").innerHTML = fruits;
+}
+flen = fruits.length;
+text = "<ol>";
+for(i=0;i< flen; i++){
+	text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ol>";
+var last = fruits[fruits.length-2];*/
+
+
+/*var cars = ["Audi", "BMW", "Volvo"];
+cars[2]= "Mercedes";
+document.getElementById("demo").innerHTML = cars;*/
+
+</script>
+</body>
+</html>
